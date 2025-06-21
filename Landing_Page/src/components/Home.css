@@ -1,0 +1,15 @@
+@keyframes bgPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  animation: bgPulse 20s ease-in-out infinite;
+  z-index: 1;
+}
+
+.hero-content { position: relative; z-index: 2; }
